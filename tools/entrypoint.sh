@@ -1,7 +1,8 @@
-#!/bin/ash
+#!/bin/bash
 
-# generate host keys if not present
-ssh-keygen -A
+for USRN in $USERS; do
+  	echo "Creating user $USRN"
+	useradd -m -s /bin/bash $USRN
+done
 
-# do not detach (-D), log to stderr (-e), passthrough other arguments
-exec /usr/sbin/sshd -D -e "$@"
+exec /usr/sbin/sshd -D -e

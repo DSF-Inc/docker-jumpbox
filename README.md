@@ -1,6 +1,6 @@
 # [drseussfreak/jumpbox](https://hub.docker.com/r/drseussfreak/jumpbox)
 
-Started from this [medium.com](https://medium.com/@manis.eren/ssh-to-intranet-through-a-jumphost-vpn-container-3d58c3af1761) image, more to come.
+Started from this [monsoft](https://github.com/monsoft/ssh-docker-jumpbox) image, more to come.
 
 ## Contents
 - [Introduction](#introduction)
