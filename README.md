@@ -17,7 +17,6 @@ Simple ssh jumpbox, just ensure you have your "authorized-keys" file and "/home"
 Automated builds of the image are available on [Dockerhub](https://hub.docker.com/r/drseussfreak/jumpbox) and is the recommended method of installation.
 
 ## Keys
-Create authorized_keys
 Each user is authenticated by ssh key during login, and to be able to do it, specially 'crafted' file is required. It's like normal authorized_keys file but with username at the beginning. General file format is:
 ```
 username:ssh_public_key
