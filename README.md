@@ -22,7 +22,7 @@ Docker Run:
 ```bash
 docker run --name jumpbox -d --restart=always \
   -p serverip:9922:22 \
-  -v /path/to/authorized-keys:/etc/authorized-keys:ro -v /path/to/home:/home \
+  -v /path/to/authorized_keys:/etc/authorized_keys:ro -v /path/to/home:/home \
   -e TZ="America/Chicago" -e USERS="user1 user2 user3" \
   drseussfreak/jumpbox
 ```
@@ -40,7 +40,7 @@ Docker Compose
         ports:
             - serverip:9922:22
         volumes:
-            - /path/to/authorized-keys:/etc/authorized-keys:ro
+            - /path/to/authorized_keys:/etc/authorized_keys:ro
             - /path/to/home:/home
         environment:
             - TZ=America/Chicago
