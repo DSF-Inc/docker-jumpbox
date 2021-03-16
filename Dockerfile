@@ -1,8 +1,8 @@
-FROM debian:stretch-slim
+FROM ubuntu:latest
 
 LABEL maintainer="DrSeussFreak"
 
-ENV TERM=xterm-256color \
+ENV TERM=xterm-256color
 
 COPY tools/ssh-user-auth.sh /usr/bin/ssh-user-auth.sh
 COPY tools/entrypoint.sh /usr/bin/entrypoint.sh
