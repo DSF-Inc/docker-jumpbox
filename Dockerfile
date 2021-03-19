@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM drseussfreak/ubuntu
 
 LABEL maintainer="DrSeussFreak"
 
