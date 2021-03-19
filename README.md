@@ -39,13 +39,15 @@ OR
 Docker Compose
 
 ```
-    bind:
+version: "3.8"
+services:
+    jumpbox:
         container_name: jumpbox
         hostname: jumpbox
         image: drseussfreak/jumpbox
         restart: unless-stopped
         ports:
-            - serverip:9922:22
+            - "9922:22"
         volumes:
             - /path/to/authorized_keys:/etc/authorized_keys:ro
             - /path/to/home:/home
