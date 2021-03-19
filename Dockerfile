@@ -7,7 +7,7 @@ ENV TERM=xterm-256color
 COPY tools/ssh-user-auth.sh /usr/bin/ssh-user-auth.sh
 COPY tools/entrypoint.sh /usr/bin/entrypoint.sh
 
-RUN apt-get -q update \
+RUN apt-get -q update \ 
 	&& DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
 		openssh-server netcat telnet curl \
 	&& mkdir /var/run/sshd \
