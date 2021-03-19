@@ -39,13 +39,15 @@ OR
 Docker Compose
 
 ```
-    bind:
+version: "3.8"
+services:
+    jumpbox:
         container_name: jumpbox
         hostname: jumpbox
         image: drseussfreak/jumpbox
         restart: unless-stopped
         ports:
-            - serverip:9922:22
+            - "9922:22"
         volumes:
             - /path/to/authorized_keys:/etc/authorized_keys:ro
             - /path/to/home:/home
@@ -60,7 +62,7 @@ Container images are configured using parameters passed at runtime (such as thos
 
 | Parameter | Function |
 | :----: | --- |
-| `-p serverip:9922:22` | SSH port|
+| `-p "9922:22"` | SSH port|
 | `-e TZ=America/Chicago` | Specify a timezone to use e.g. America/Chicago |
 | `-e USERS=user 1 user2` | add the users you wish to connect with. |
 | `-v /path/to/authorized_keys:/etc/authorized_keys:ro` | Mount authorized_keys file for persistent config  |

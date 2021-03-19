@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+    bind:
+        container_name: jumpbox
+        hostname: jumpbox
+        image: drseussfreak/jumpbox
+        restart: unless-stopped
+        ports:
+            - "9922:22"
+        volumes:
+            - /path/to/authorized_keys:/etc/authorized_keys:ro
+            - /path/to/home:/home
+        environment:
+            - TZ=America/Chicago
+            - USERS=user1 user2 user3
