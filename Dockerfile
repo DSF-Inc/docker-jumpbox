@@ -13,6 +13,7 @@ RUN apt-get -q update \
 	&& mkdir /var/run/sshd \
 	&& echo "AuthorizedKeysCommand /usr/bin/ssh-user-auth.sh" >> /etc/ssh/sshd_config \
   	&& echo "AuthorizedKeysCommandUser nobody" >> /etc/ssh/sshd_config \
+	&& apt-get upgrade -y \
 	&& apt-get clean autoclean \
   	&& apt-get autoremove --yes \
   	&& rm -rf /var/lib/{apt,dpkg,cache,log}/ \
