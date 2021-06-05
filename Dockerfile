@@ -1,4 +1,4 @@
-FROM drseussfreak/ubuntu
+FROM dsfinc/ubuntu
 
 LABEL maintainer="DrSeussFreak"
 
