@@ -1,4 +1,4 @@
-# [drseussfreak/jumpbox](https://hub.docker.com/r/drseussfreak/jumpbox)
+# [dsfinc/jumpbox](https://hub.docker.com/r/dsfinc/jumpbox)
 
 Started from this [monsoft](https://github.com/monsoft/ssh-docker-jumpbox) image, will try to maintain this image for myself, but am happy to share it out as well.
 
@@ -14,7 +14,7 @@ Simple ssh jumpbox, just ensure you have your "authorized-keys" file and "/home"
 
 ## Installation
 
-Automated builds of the image are available on [Dockerhub](https://hub.docker.com/r/drseussfreak/jumpbox) and is the recommended method of installation.
+Automated builds of the image are available on [Dockerhub](https://hub.docker.com/r/dsfinc/jumpbox) and is the recommended method of installation.
 
 ## Keys
 Each user is authenticated by ssh key during login, and to be able to do it, specially 'crafted' file is required. It's like normal authorized_keys file but with username at the beginning. General file format is:
@@ -31,7 +31,7 @@ docker run --name jumpbox -d --restart=always \
   -p serverip:9922:22 \
   -v /path/to/authorized_keys:/etc/authorized_keys:ro -v /path/to/home:/home \
   -e TZ="America/Chicago" -e USERS="user1 user2 user3" \
-  drseussfreak/jumpbox
+  dsfinc/jumpbox
 ```
 
 OR
@@ -44,7 +44,7 @@ services:
     jumpbox:
         container_name: jumpbox
         hostname: jumpbox
-        image: drseussfreak/jumpbox
+        image: dsfinc/jumpbox
         restart: unless-stopped
         ports:
             - "9922:22"

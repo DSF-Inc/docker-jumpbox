@@ -3,7 +3,7 @@ services:
     bind:
         container_name: jumpbox
         hostname: jumpbox
-        image: drseussfreak/jumpbox
+        image: dsfinc/jumpbox
         restart: unless-stopped
         ports:
             - "9922:22"
